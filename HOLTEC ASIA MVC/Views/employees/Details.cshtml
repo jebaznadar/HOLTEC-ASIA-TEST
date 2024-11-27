@@ -1,0 +1,50 @@
+﻿@model HOLTEC_ASIA_MVC.Models.employee
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Details</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h4>Employee Details</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-3">@Html.DisplayNameFor(model => model.firstname)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.firstname)</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(model => model.lastname)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.lastname)</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(model => model.gender)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.gender)</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(model => model.age)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.age)</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(model => model.dob)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.dob)</dd>
+
+            <dt class="col-sm-3">@Html.DisplayNameFor(model => model.address)</dt>
+            <dd class="col-sm-9">@Html.DisplayFor(model => model.address)</dd>
+        </dl>
+
+        <div>
+            <a href="@Url.Action("Edit", new { id = Model.Email })" class="btn btn-warning">Edit</a>
+            <a href="@Url.Action("Index")" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

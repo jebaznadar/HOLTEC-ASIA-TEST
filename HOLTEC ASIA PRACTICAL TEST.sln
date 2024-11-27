@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOLTEC ASIA API", "HOLTEC ASIA API\HOLTEC ASIA API.csproj", "{70765CE1-18A5-48AB-968A-FD8150B9C7FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HOLTEC ASIA MVC", "HOLTEC ASIA MVC\HOLTEC ASIA MVC.csproj", "{29B54520-713F-498C-8A6F-B1CE3CAA673E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70765CE1-18A5-48AB-968A-FD8150B9C7FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70765CE1-18A5-48AB-968A-FD8150B9C7FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70765CE1-18A5-48AB-968A-FD8150B9C7FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70765CE1-18A5-48AB-968A-FD8150B9C7FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29B54520-713F-498C-8A6F-B1CE3CAA673E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B54520-713F-498C-8A6F-B1CE3CAA673E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B54520-713F-498C-8A6F-B1CE3CAA673E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B54520-713F-498C-8A6F-B1CE3CAA673E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E26F716-A797-4B2F-B9BD-38577BBAC817}
+	EndGlobalSection
+EndGlobal

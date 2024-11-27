@@ -1,0 +1,71 @@
+﻿@model IEnumerable<HOLTEC_ASIA_MVC.Models.employee>
+@using System
+@using HOLTEC_ASIA_MVC.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table id="employeeTable" class="table display" style="width:100%">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.firstname)</th>
+                <th>@Html.DisplayNameFor(model => model.lastname)</th>
+                <th>@Html.DisplayNameFor(model => model.gender)</th>
+                <th>@Html.DisplayNameFor(model => model.age)</th>
+                <th>@Html.DisplayNameFor(model => model.dob)</th>
+                <th>@Html.DisplayNameFor(model => model.address)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.firstname)</td>
+                    <td>@Html.DisplayFor(modelItem => item.lastname)</td>
+                    <td>@item.GenderAsString</td>
+                    <td>@Html.DisplayFor(modelItem => item.age)</td>
+                    <td>@Html.DisplayFor(modelItem => item.dob)</td>
+                    <td>@Html.DisplayFor(modelItem => item.address)</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { Email = item.Email }) |
+                        @Html.ActionLink("Details", "Details", new { Email = item.Email }) |
+                        @Html.ActionLink("Delete", "Delete", new { Email = item.Email })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#employeeTable').DataTable({
+                paging: true,
+                searching: true,
+                ordering: true,
+                responsive: true,
+                lengthMenu: [ 10, 25, 50],
+                language: {
+                    search: "Filter Records:",
+                    lengthMenu: "Show _MENU_ entries"
+                }
+            });
+        });
+    </script>
+</body>
+</html>
